@@ -6,7 +6,7 @@ students = []
 
 app = Flask(__name__)
 
-@app.route("/", method=["Get", "POST"])
+@app.route("/", method=["GET", "POST"])
 def students_page():
   if request.method == "POST":
     new_student_id = request.form.get("student-id", "")
@@ -15,6 +15,8 @@ def students_page():
 
     new_student = Student(name=new_student_name, student_id=new_student_id)
     students.append(new_student)
+
+       return redirect(url_for("students_page"))
 
     return render_template("index.html", students=students)
 

@@ -1,1 +1,0 @@
-from hs_student import *
