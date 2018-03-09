@@ -39,8 +39,8 @@ read_file()
 print_students_titlecase()
 
 
-student_name = raw_input("Enter your student name: ")
-student_id = raw_input("Enter the student id: ")
+student_name = input("Enter your student name: ")
+student_id = input("Enter the student id: ")
 
 add_student(student_name, student_id)
 save_file(student_name)
